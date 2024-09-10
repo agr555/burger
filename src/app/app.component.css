@@ -550,7 +550,7 @@
             }
             .order-form-input {
                 width: 280px;
-                input{
+                &.input{
                     width: 279px;
 
                 }
