@@ -21,32 +21,3 @@ export class AppService {
 //    return this.http.get(environment.api + 'burger');
   }
 }
-/*
-
-[
-  {
-    "image": "http://testologia.site/cars-images/4.png",
-    "name": "Lamborghini Urus",
-    "gear": "полный",
-    "engine": 3.2,
-    "places": 3
-  },
-]
-
-*/
-
-/*
-  //sendQuery(data: any) {
-  //  return this.http.post('https://testologia.ru/intensive-price', data);}
-  //
-
-  this.appService.sendQuery(this.priceForm.value)
-  ...
-    priceForm = this.fb.group({
-    name: ['', Validators.required],
-    phone: ['', Validators.required],
-    car: ['', Validators.required]
-  })
-
-
-*/
