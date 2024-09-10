@@ -1,0 +1,192 @@
+<section class="main">
+
+  <header class="header">
+      <div class="container">
+          <div class="logo">
+              <img src="./assets/images/LOGO.png" alt="logo">
+          </div>
+          <div class="burger" id="burger" (click)="toggleBurgerMenuOpen()">
+            <svg id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z">
+              </path>
+              <path
+                d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z">
+              </path>
+              <path
+                d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z">
+              </path>
+            </svg>
+          </div>
+
+          <nav class="menu" id="menu" [class.open]="burgerMenuOpen">
+      <div class="close" id="close" (click)="burgerMenuClose()">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+          c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+          c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+          L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+          c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+          c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+          c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" />
+            </g>
+          </g>
+        </svg>
+      </div>
+              <ul class="menu-list">
+                  <li class="menu-item">
+                      <!-- <a href="#">Почему у нас</a> -->
+                      <a (click)="scrollTo(why)">Prečo práve my</a>
+
+                  </li>
+                  <li class="menu-item">
+                      <!-- <a href="#">Меню бургеров</a> -->
+                      <a (click)="scrollTo(products)">Burger menu</a>
+                  </li>
+                  <li class="menu-item">
+                      <a (click)="scrollTo(order)">Objednať</a>
+                  </li>
+              </ul>
+          </nav>
+          <div class="currency" title="Изменить валюту" id = "change-currency" (click)="changeCurrency()">{{currency}}</div>
+      </div>
+
+  </header>
+  <section class="main-content">
+      <div class="container">
+          <div class="main-info">
+              <span class="main-small-info">Nové menu**</span>
+              <h1 class="main-title">Burger Čedar </h1>
+              <p class="main-text">
+                Aktualizovali sme naše menu, neváhajte vyskúšať sezónne novinky a vychutnať si skvelú chuť našich burgerov. Pripravujeme pre vás tie najlepšie burgre v meste z vybraného mramorového hovädzieho mäsa.
+              </p>
+              <div class="main-action">
+                  <button class="button" id="main-action-button" (click)="scrollTo(products)">Zobraziť menu</button>
+              </div>
+              <img src="./assets/images/main_burger.png" alt="Big burger" class="main-image">
+          </div>
+      </div>
+  </section>
+</section>
+<!-- /* day 3. block2 */ -->
+<section class="why" id="why" #why>
+  <div class="container">
+      <!-- <div class="why-title">почему нас выбирают?</div> -->
+      <div class="why-title common-title">Prečo si vybrať práve nás?</div>
+      <div class="why-items">
+          <div class="why-item">
+              <img src="./assets/images/burger.png" alt="burger" class="why-item-image">
+              <div class="why-item-title">Autorské recepty</div>
+              <div class="why-item-text">Naše burgery majú výnimočnú kombináciu chutí a nie sú podobné žiadnym iným. Do nášho menu starostlivo vyberáme len tie najlepšie ingrediencie a kombinácie chutí.
+              </div>
+          </div>
+
+          <div class="why-item">
+              <img src="./assets/images/meat.png" alt="meat" class="why-item-image">
+              <div class="why-item-title">Mramorované hovädzie mäso</div>
+              <div class="why-item-text">Pre naše hamburgery používame vybrané 100% mramorované hovädzie mäso,
+                ktoré nakupujeme výhradne od slovenských farmárov. Garantujeme kvalitu nášho mäsa.
+              </div>
+          </div>
+          <div class="why-item">
+              <img src="./assets/images/food truck.png" alt="food truck" class="why-item-image">
+              <div class="why-item-title">Rýchle doručenie</div>
+              <div class="why-item-text">Doručujeme do 30 minút, a ak to nestihneme, doručenie je zadarmo. Naše burgery starostlivo balíme, aby cestou nevychladli.
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--block 3-->
+<section class="products" id="products" #products>
+  <div class="container">
+      <div class="product-title common-title">Vyberte si svoj burger</div>
+      <div class="products-items">
+
+          <!-- 1 -->
+          <div class="product-item" *ngFor="let product of productsData">
+              <div class="product-item-image">
+                  <img src="./assets/images/{{product.image}}" alt="burger">
+              </div>
+              <div class="product-item-title">{{product.title}}</div>
+              <div class="product-item-text">{{product.text}}</div>
+              <div class="product-item-extra">
+                  <div class="product-item-info">
+                      <div class="product-item-price">{{product.price}} {{currency}}</div>
+                      <div class="product-item-weight">{{product.grams}} gr</div>
+                  </div>
+                  <div class="product-item-action">
+                      <button class="button product-button" (click)="scrollTo(order, product)">
+                          <span>Vezmem si to!</span>
+                          <span>
+                              <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                      d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+                                      fill="#191411" />
+                              </svg>
+                          </span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+        
+          <!--end of cards  -->
+
+
+      </div>
+  </div>
+</section>
+<!--block 3-->
+<section class="order" id="order" #order>
+  <div class="container">
+      <div class="order-title common-title">Objednávka</div>
+      <img src="./assets/images/order_image.png" alt="burger in the box" class="order-image">
+      <div class="order-form">
+          <div class="order-form-text">Vyplňte všetky údaje a náš pracovník vás bude kontaktovať, aby potvrdil vašu objednávku.
+          </div>
+          <form action="" class="order-form-inputs" [formGroup]="form">
+            <div class="order-form-input">
+                <input type="text" class="price-input" formControlName="name" id="name" placeholder="Vaše meno" >
+            </div>
+            <div class="order-form-input">
+            <input type="text"  class="price-input" formControlName="phone" id="phone" placeholder="Vaše telefónne číslo" >
+        </div>
+            <div class="order-form-input">
+            <input type="text"   class="price-input" formControlName="product" id="burger" placeholder="Vyberte si burger zo zoznamu">
+        </div>
+            
+            
+
+              <button class="button" id="order-action" (click)="onSubmit()" [disabled]="!form.valid">Odoslať objednávku</button>
+            </form>
+      </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+      <div class="logo">
+          <img src="./assets/images/LOGO.png" alt="logo">
+      </div>
+
+      <div class="right">2023. Všetky práva vyhradené</div>
+  </div>
+</footer>
+<a href="#" id="top" routerLink="/">
+
+    <svg fill="#000000" width="40px" height="40px" viewBox="0 0 52 52" enable-background="new 0 0 0 0"
+      xml:space="preserve">
+      <g>
+        <path d="M11.4,21.6L24.9,7.9c0.6-0.6,1.6-0.6,2.2,0l13.5,13.7c0.6,0.6,0.6,1.6,0,2.2L38.4,26
+        c-0.6,0.6-1.6,0.6-2.2,0l-9.1-9.4c-0.6-0.6-1.6-0.6-2.2,0l-9.1,9.3c-0.6,0.6-1.6,0.6-2.2,0l-2.2-2.2C10.9,23.1,10.9,22.2,11.4,21.6
+        z" />
+        <path d="M11.4,39.7L24.9,26c0.6-0.6,1.6-0.6,2.2,0l13.5,13.7c0.6,0.6,0.6,1.6,0,2.2l-2.2,2.2
+        c-0.6,0.6-1.6,0.6-2.2,0l-9.1-9.4c-0.6-0.6-1.6-0.6-2.2,0L15.8,44c-0.6,0.6-1.6,0.6-2.2,0l-2.2-2.2C10.9,41.2,10.9,40.2,11.4,39.7z
+        " />
+      </g>
+    </svg></a>
