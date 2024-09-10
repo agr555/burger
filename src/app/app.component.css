@@ -31,11 +31,23 @@
                 display: flex;
                 align-items: center;
                 text-align: center;
+                z-index: 10;
             }
 
             .close {
                 display: none;
             }
+            .menu .close {
+                display: block;
+                width: 24px;
+                height: 24px;
+                fill:#da8023;
+        
+                position: absolute;
+                top: 20px;
+                right: 20px;
+              }
+        
 
             /*end burger menu*/
             .logo img {
@@ -445,10 +457,10 @@
 
                 .menu-item a {
                     text-decoration: none;
-                    color: white;
-                    font-size: 32px;
+                    font-size: 40px;
                     text-align: center;
-                    color: rgb(244, 242, 237);
+                    /* color: rgb(244, 242, 237); */
+                    color:#da8023;
                     line-height: 1;
                 }
 
